@@ -1,0 +1,68 @@
+diff --git a/packages/attr/build.sh b/packages/attr/build.sh
+index 6c193fe..d6ead30 100644
+--- a/packages/attr/build.sh
++++ b/packages/attr/build.sh
+@@ -3,8 +3,8 @@ TERMUX_PKG_DESCRIPTION="Utilities for manipulating filesystem extended attribute
+ TERMUX_PKG_LICENSE="GPL-2.0"
+ TERMUX_PKG_MAINTAINER="@termux"
+ TERMUX_PKG_VERSION="2.6.0"
+-TERMUX_PKG_SRCURL="http://download.savannah.gnu.org/releases/attr/attr-${TERMUX_PKG_VERSION}.tar.gz"
+-TERMUX_PKG_SHA256=d42fa374513180bb48cb11a46696f488240e5124ff1e6ad88b0abff706985612
++TERMUX_PKG_SRCURL="http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_${TERMUX_PKG_VERSION}.orig.tar.xz"
++TERMUX_PKG_SHA256=6c8a2148a7b85043b68492bce43316b0e2e214fc4e628c7ede078e76e216330b
+ TERMUX_PKG_AUTO_UPDATE=true
+ TERMUX_PKG_BREAKS="attr-dev"
+ TERMUX_PKG_REPLACES="attr-dev"
+diff --git a/packages/libacl/build.sh b/packages/libacl/build.sh
+index 79660ba..2d1b1fd 100644
+--- a/packages/libacl/build.sh
++++ b/packages/libacl/build.sh
+@@ -3,7 +3,7 @@ TERMUX_PKG_DESCRIPTION="Access control list shared library"
+ TERMUX_PKG_LICENSE="LGPL-2.1, GPL-2.0"
+ TERMUX_PKG_MAINTAINER="@termux"
+ TERMUX_PKG_VERSION="2.4.0"
+-TERMUX_PKG_SRCURL=https://download.savannah.gnu.org/releases/acl/acl-${TERMUX_PKG_VERSION}.tar.gz
+-TERMUX_PKG_SHA256=73c853c3d44e1f693e5a96a986f1bd19d3d0dac2c7d453e796177774bc4e5f6a
++TERMUX_PKG_SRCURL=http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_${TERMUX_PKG_VERSION}.orig.tar.xz
++TERMUX_PKG_SHA256=e661131456d2708a01c614a0f400e11d7d1bfaeb6f3e74b75bb980b72f0161a3
+ TERMUX_PKG_AUTO_UPDATE=true
+ TERMUX_PKG_DEPENDS="attr"
+diff --git a/packages/libpipeline/build.sh b/packages/libpipeline/build.sh
+index 9739c9c..761cd88 100644
+--- a/packages/libpipeline/build.sh
++++ b/packages/libpipeline/build.sh
+@@ -4,7 +4,7 @@ TERMUX_PKG_LICENSE="GPL-3.0"
+ TERMUX_PKG_MAINTAINER="@termux"
+ TERMUX_PKG_VERSION=1.5.8
+ TERMUX_PKG_REVISION=1
+-TERMUX_PKG_SRCURL=https://download.savannah.nongnu.org/releases/libpipeline/libpipeline-${TERMUX_PKG_VERSION}.tar.gz
++TERMUX_PKG_SRCURL=http://archive.ubuntu.com/ubuntu/pool/main/libp/libpipeline/libpipeline_${TERMUX_PKG_VERSION}.orig.tar.gz
+ TERMUX_PKG_SHA256=1b1203ca152ccd63983c3f2112f7fe6fa5afd453218ede5153d1b31e11bb8405
+ TERMUX_PKG_BREAKS="libpipeline-dev"
+ TERMUX_PKG_REPLACES="libpipeline-dev"
+diff --git a/scripts/build/termux_create_debian_subpackages.sh b/scripts/build/termux_create_debian_subpackages.sh
+index 47e1c2d..7d15b0d 100644
+--- a/scripts/build/termux_create_debian_subpackages.sh
++++ b/scripts/build/termux_create_debian_subpackages.sh
+@@ -152,7 +152,7 @@ termux_create_debian_subpackages() {
+ 		# Create the actual .deb file:
+ 		TERMUX_SUBPKG_DEBFILE=$TERMUX_OUTPUT_DIR/${SUB_PKG_NAME}${DEBUG}_${TERMUX_PKG_FULLVERSION}_${SUB_PKG_ARCH}.deb
+ 		[[ -f "$TERMUX_COMMON_CACHEDIR/debian-binary" ]] || echo "2.0" > "$TERMUX_COMMON_CACHEDIR/debian-binary"
+-		${AR-ar} cr "$TERMUX_SUBPKG_DEBFILE" \
++		ar cr "$TERMUX_SUBPKG_DEBFILE" \
+ 				   "$TERMUX_COMMON_CACHEDIR/debian-binary" \
+ 				   "$SUB_PKG_PACKAGE_DIR/control.tar.xz" \
+ 				   "$SUB_PKG_PACKAGE_DIR/data.tar.xz"
+diff --git a/scripts/properties.sh b/scripts/properties.sh
+index fe062ea..064a390 100644
+--- a/scripts/properties.sh
++++ b/scripts/properties.sh
+@@ -464,7 +464,7 @@ TERMUX__REPOS_HOST_ORG_URL="https://github.com/$TERMUX__REPOS_HOST_ORG_NAME"
+ #
+ # Default value: `com.termux`
+ ##
+-TERMUX_APP__PACKAGE_NAME="com.termux"
++TERMUX_APP__PACKAGE_NAME="com.terminus.terminal"
+ TERMUX_APP_PACKAGE="$TERMUX_APP__PACKAGE_NAME" # Deprecated alternative variable for `TERMUX_APP__PACKAGE_NAME`
+ 
+ __termux_build_props__add_variables_validator_actions "TERMUX_APP__PACKAGE_NAME" "app_package_name"

@@ -1,0 +1,16 @@
+# Build outputs
+output/
+*.deb
+*.zip
+*.tar.xz
+bootstrap-build.log
+local.properties
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# termux-packages / termux-app are upstream clones (patches tracked in docs/)
+termux-packages/
+termux-app/
