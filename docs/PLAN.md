@@ -16,7 +16,7 @@ Auditable, AI-powered Android terminal. Positioning: **"the AI terminal you can 
    - **Gate: if bootstrap build takes >2–3 days or breaks on core packages → fall back to option (a) (keep Termux app ID) for the beta; revisit after v1.**
    - Rationale: (b) makes us permanent owner of security updates for every rebuilt package.
 2. **Hands-on repro**: build stock Termux on 2–3 devices (must include a Samsung or Xiaomi); reproduce phantom-proc kills and typing pain.
-3. **Name/namespace**: availability checks (F-Droid, Play, GitHub, USPTO) on shortlist (Terminus, Halcyon, Axis, Nullpoint). Reserve GitHub org + domain immediately regardless of final name.
+3. **Name/namespace**: availability checks (F-Droid, Play, GitHub, USPTO) — DONE: name is Zantor, repo https://github.com/purvanshbhatt/Zantor. Domain + org reservation by user.
 4. **Validation**: hands-on comparison vs. Termux + Claude Code/Gemini CLI, NetHunter, Warp — record what they do well/badly in `docs/COMPETITIVE.md`.
 
 ## M1 (1 wk)

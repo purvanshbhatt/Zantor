@@ -1,4 +1,4 @@
-# Terminus (working codename)
+# Zantor
 
 An auditable, AI-powered Android terminal. Name is a placeholder — final name pending
 availability checks (F-Droid / Play / GitHub / USPTO) in M0.

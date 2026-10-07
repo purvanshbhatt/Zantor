@@ -4,9 +4,9 @@
 **Verdict: PROVISIONAL GO** — custom-prefix builds work; see open risks.
 
 ## Goal
-Determine whether we can ship with our own app ID (`com.terminus.terminal`,
+Determine whether we can ship with our own app ID (`com.zantor.terminal`,
 placeholder) by rebuilding the Termux package set for a new prefix:
-`/data/data/com.terminus.terminal/files/usr`. Gate: abandon to option (a)
+`/data/data/com.zantor.terminal/files/usr`. Gate: abandon to option (a)
 (keep Termux app ID) if a bootstrap build takes >2–3 days or breaks on core
 packages.
 
@@ -14,7 +14,7 @@ packages.
 - `bash` + dependency chain (`libandroid-support`, `libgmp`, `ncurses`,
   `readline`, `ca-certificates`, `pcre2`, `libacl`, `attr`, …) build cleanly
   from source for `aarch64` with the new prefix.
-- Verified `.deb` contents target `/data/data/com.terminus.terminal/files/usr/...`.
+- Verified `.deb` contents target `/data/data/com.zantor.terminal/files/usr/...`.
 - The build system already detects prefix mismatch and refuses prebuilt
   `com.termux` deps ("repo package name does not equal app package name") —
   so the full dependency graph must be source-built, as expected. This is the
@@ -22,7 +22,7 @@ packages.
 
 ## Patches applied (see `PATCHES-termux-packages.diff`)
 1. `scripts/properties.sh` — default `TERMUX_APP__PACKAGE_NAME` →
-   `com.terminus.terminal`. The `~/.config/termux/termuxrc.sh` override
+   `com.zantor.terminal`. The `~/.config/termux/termuxrc.sh` override
    mechanism is sourced *after* path derivation and fight-picks every derived
    variable; patching the default in our fork is the correct path.
 2. `scripts/build/termux_create_debian_subpackages.sh` — `${AR-ar}` → `ar`.

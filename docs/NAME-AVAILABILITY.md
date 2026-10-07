@@ -16,7 +16,7 @@ Checked 2026-10-06 via web search (GitHub / Play / F-Droid / domains, best effor
 | **Kersos** | **Clear** | No software presence found (only unrelated Greek/Indonesian social accounts) |
 
 ## Recommendation
-Working codename stays **Terminus** for local dirs only (`com.terminus.terminal`
+Working codename stays **Terminus** for local dirs only (`com.zantor.terminal`
 package ID must change before release — do not ship under a blocked name).
 Final candidate: **Kersos** (clear), or invent a new coinage.
 Blocked: Aegis, Terminus, Nullpoint, TermForge, Agentron, Halcyon, Axis.

@@ -1,0 +1,28 @@
+diff --git a/app/build.gradle b/app/build.gradle
+index 33c88d1..6338c65 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -41,6 +41,7 @@ android {
+     }
+ 
+     defaultConfig {
++        applicationId "com.zantor.terminal"
+         minSdkVersion project.properties.minSdkVersion.toInteger()
+         targetSdkVersion project.properties.targetSdkVersion.toInteger()
+         versionCode 118
+diff --git a/termux-shared/src/main/java/com/termux/shared/termux/TermuxConstants.java b/termux-shared/src/main/java/com/termux/shared/termux/TermuxConstants.java
+index 534936f..1aeeffd 100644
+--- a/termux-shared/src/main/java/com/termux/shared/termux/TermuxConstants.java
++++ b/termux-shared/src/main/java/com/termux/shared/termux/TermuxConstants.java
+@@ -347,9 +347,9 @@ public final class TermuxConstants {
+      */
+ 
+     /** Termux app name */
+-    public static final String TERMUX_APP_NAME = "Termux"; // Default: "Termux"
++    public static final String TERMUX_APP_NAME = "Zantor"; // Default: "Zantor"
+     /** Termux package name */
+-    public static final String TERMUX_PACKAGE_NAME = "com.termux"; // Default: "com.termux"
++    public static final String TERMUX_PACKAGE_NAME = "com.zantor.terminal"; // Default: "com.zantor.terminal"
+     /** Termux GitHub repo name */
+     public static final String TERMUX_GITHUB_REPO_NAME = "termux-app"; // Default: "termux-app"
+     /** Termux GitHub repo url */

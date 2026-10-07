@@ -1,4 +1,4 @@
-# Threat Model — Terminus (working codename)
+# Threat Model — Zantor
 
 **Version:** 0.1 (draft)
 **Status:** Pre-implementation. Update whenever the architecture changes.
@@ -21,7 +21,7 @@
 
 ```
 ┌─────────────────────────────── device ───────────────────────────────┐
-│  other apps  ──(TB4: Binder/intent surface)──▶  Terminus app          │
+│  other apps  ──(TB4: Binder/intent surface)──▶  Zantor app          │
 │                                                      │                │
 │        shell executor (agent-spawned, same uid)      │                │
 │                  ▲                                   │                │
