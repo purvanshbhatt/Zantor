@@ -40,6 +40,19 @@ index 9739c9c..761cd88 100644
  TERMUX_PKG_SHA256=1b1203ca152ccd63983c3f2112f7fe6fa5afd453218ede5153d1b31e11bb8405
  TERMUX_PKG_BREAKS="libpipeline-dev"
  TERMUX_PKG_REPLACES="libpipeline-dev"
+diff --git a/scripts/build-bootstraps.sh b/scripts/build-bootstraps.sh
+index 53bb59d..ed77176 100755
+--- a/scripts/build-bootstraps.sh
++++ b/scripts/build-bootstraps.sh
+@@ -429,7 +429,7 @@ main() {
+ 
+ 		# Core utilities.
+ 		PACKAGES+=("bash") # Used by `termux-bootstrap-second-stage.sh`
+-		PACKAGES+=("bzip2")
++		PACKAGES+=("libbz2")
+ 		if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
+ 			PACKAGES+=("command-not-found")
+ 		else
 diff --git a/scripts/build/termux_create_debian_subpackages.sh b/scripts/build/termux_create_debian_subpackages.sh
 index 47e1c2d..7d15b0d 100644
 --- a/scripts/build/termux_create_debian_subpackages.sh

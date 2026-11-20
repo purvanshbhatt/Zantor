@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#93000a", "primary-container": "#38bdf8", "on-primary": "#00354a", "on-surface": "#dfe2eb", "on-surface-variant": "#bdc8d1", "surface-dim": "#10141a", "tertiary-fixed": "#68fcbf", "surface-variant": "#31353c", "tertiary": "#4ee6aa", "surface-container-high": "#262a31", "primary-fixed-dim": "#7bd0ff", "inverse-primary": "#00668a", "tertiary-fixed-dim": "#45dfa4", "inverse-surface": "#dfe2eb", "on-tertiary": "#003825", "on-secondary-fixed-variant": "#4f319c", "on-tertiary-container": "#004e35", "inverse-on-surface": "#2d3137", "on-tertiary-fixed": "#002114", "outline": "#87929a", "on-secondary-container": "#bea8ff", "primary-fixed": "#c4e7ff", "background": "#10141a", "surface-tint": "#7bd0ff", "surface": "#10141a", "secondary-container": "#4f319c", "tertiary-container": "#22c990", "surface-container-lowest": "#0a0e14", "error": "#ffb4ab", "surface-container-highest": "#31353c", "on-primary-fixed-variant": "#004c69", "on-secondary-fixed": "#21005e", "on-primary-container": "#004965", "on-secondary": "#381385", "primary": "#8ed5ff", "secondary": "#cebdff", "on-error-container": "#ffdad6", "outline-variant": "#3e484f", "surface-bright": "#353940", "on-error": "#690005", "on-primary-fixed": "#001e2c", "on-tertiary-fixed-variant": "#005137", "surface-container-low": "#181c22", "on-background": "#dfe2eb", "surface-container": "#1c2026", "secondary-fixed": "#e8ddff", "secondary-fixed-dim": "#cebdff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-md": "0.75rem", gutter: "0.5rem", "gutter-tablet": "1rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-xs": "0.25rem", margin: "0.75rem", "margin-tablet": "1.5rem", "space-sm": "0.5rem" }, fontFamily: { "code-sm": ["JetBrains Mono"], "body-md": ["Roboto Flex"], "headline-sm": ["Roboto Flex"], "label-md": ["JetBrains Mono"], "code-md": ["JetBrains Mono"], "headline-lg": ["Roboto Flex"], "body-lg": ["Roboto Flex"], "body-sm": ["Roboto Flex"], "headline-md": ["Roboto Flex"], "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "code-lg": ["JetBrains Mono"] }, fontSize: { "code-sm": ["11px", { lineHeight: "15px", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "code-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "code-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#10141a;color:#dfe2eb;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface min-h-screen text-on-surface flex flex-col font-body-md text-body-md selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter min-w-0"><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-high/60 active:scale-95"><span class="material-symbols-outlined text-[22px]">terminal</span></button><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="text-primary font-code-md text-code-md font-semibold truncate">Terminal Workspace</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><div class="flex items-center gap-gutter"><span class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>AI READY</span><span class="text-outline text-label-sm font-label-sm">•</span><span class="text-on-surface-variant font-label-sm text-label-sm font-code-sm">38% CPU</span></div></div></div><div class="flex items-center gap-space-xs"><div class="hidden sm:flex items-center gap-gutter bg-surface-container-high/70 px-space-md py-space-xs rounded-full"><span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Claude 3.7</span><span class="w-1 h-1 rounded-full bg-outline"></span><span class="font-label-sm text-label-sm text-tertiary">Gemini CLI</span></div><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-container-high/60 active:scale-95"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_0_12px_rgba(142,213,255,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Responsive Sub-Header / Workspace Metabar -->
+<div class="px-gutter-tablet py-space-sm flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-md py-space-xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">proot://alpine-edge</span>
+</div>
+<span class="text-outline text-label-sm font-label-sm hidden sm:inline">•</span>
+<div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+<span>Clang 18.1.3 (LLVM)</span>
+</div>
+</div>
+<!-- Active Port Signals & Quick Toggle Pills -->
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-highest px-space-sm py-0.5 rounded-full text-tertiary font-label-sm text-label-sm gap-space-xs shadow-inner">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>:8080 Active</span>
+</div>
+<div class="flex items-center bg-surface-container-highest px-space-sm py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>:3000 Idle</span>
+</div>
+<button class="flex items-center justify-center w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">splitscreen</span>
+</button>
+</div>
+</div>
+<!-- Dual Split-Pane Studio (Optimized for Foldables & High-Density Tablet/Mobile) -->
+<div class="px-gutter-tablet py-space-sm grid grid-cols-1 lg:grid-cols-12 gap-space-md w-full">
+<!-- LEFT PANE: Editor & Buffer Workspace (7 cols on Foldable Inner Screen) -->
+<div class="lg:col-span-7 flex flex-col bg-surface-container-low rounded-lg shadow-md overflow-hidden">
+<!-- Editor Tab Bar (Material 3 Dynamic Expressive Style) -->
+<div class="flex items-center justify-between px-space-sm pt-space-xs bg-surface-container-high">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar pb-space-xs">
+<!-- Active Tab: main.cxx -->
+<div class="flex items-center gap-space-xs bg-surface-container-low text-primary px-space-md py-space-xs rounded-t-lg shadow-sm font-label-sm text-label-sm cursor-pointer">
+<span class="material-symbols-outlined text-[14px] text-primary">data_object</span>
+<span class="font-code-sm text-code-sm font-semibold">main.cxx</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary ml-space-xs"></span>
+<button class="text-outline hover:text-on-surface ml-space-xs"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+<!-- Inactive Tab: class.hpp -->
+<div class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-t-lg font-label-sm text-label-sm cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[14px] text-secondary">code_blocks</span>
+<span class="font-code-sm text-code-sm">class.hpp</span>
+<span class="text-tertiary text-[10px] ml-1">●</span>
+</div>
+<!-- Inactive Tab: CMakeLists.txt -->
+<div class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-t-lg font-label-sm text-label-sm cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[14px] text-outline">build</span>
+<span class="font-code-sm text-code-sm">CMakeLists.txt</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pb-space-xs text-outline">
+<button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" title="Format Buffer">
+<span class="material-symbols-outlined text-[16px]">code</span>
+</button>
+<button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-surface-container transition-colors" title="Find in Code">
+<span class="material-symbols-outlined text-[16px]">search</span>
+</button>
+</div>
+</div>
+<!-- Editor Buffer Content Stage -->
+<div class="p-space-md font-code-md text-code-md flex flex-col gap-1 relative selection:bg-primary-container selection:text-on-primary-container overflow-x-auto min-h-[380px]">
+<!-- Nano/Vim Visual Watermark Breadcrumb -->
+<div class="flex items-center justify-between pb-space-xs mb-space-xs text-outline text-label-sm font-label-sm bg-surface-container-lowest/60 px-space-sm py-1 rounded">
+<span class="text-tertiary">GNU nano 8.2 • C++23 mode</span>
+<span class="text-on-surface-variant">Ln 9, Col 23 • UTF-8 • LF</span>
+</div>
+<!-- Syntax Stream -->
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">1</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-secondary font-medium">#include</span>
+<span class="text-tertiary">&lt;iostream&gt;</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">2</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-secondary font-medium">#include</span>
+<span class="text-tertiary">&lt;string&gt;</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">3</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-secondary font-medium">#include</span>
+<span class="text-tertiary">&lt;vector&gt;</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">4</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-secondary font-medium">#include</span>
+<span class="text-primary-container font-semibold">"class.hpp"</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">5</span>
+<span class="text-outline/30"></span>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">6</span>
+<div class="flex items-center flex-wrap gap-x-space-xs">
+<span class="text-primary font-semibold">int</span>
+<span class="text-tertiary-fixed font-semibold">main</span><span class="text-on-surface">(</span><span class="text-primary">int</span>
+<span class="text-on-surface">argc,</span>
+<span class="text-primary">char</span>
+<span class="text-secondary">*argv[]</span><span class="text-on-surface">)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">7</span>
+<span class="text-on-surface">{</span>
+</div>
+<!-- Indented Body with Nano Syntax Recreation & Linter Alert -->
+<div class="flex items-start gap-space-md leading-relaxed group relative bg-secondary-container/15 -mx-space-md px-space-md rounded-sm">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">8</span>
+<div class="pl-4 flex items-center flex-wrap gap-x-space-xs">
+<span class="text-primary-fixed-dim font-bold">Human</span>
+<span class="text-on-surface font-semibold">Avi</span>
+<span class="text-secondary">{</span><span class="text-tertiary-container">"Avi"</span><span class="text-on-surface">,</span>
+<span class="text-secondary-fixed">17</span><span class="text-secondary">};</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">9</span>
+<div class="pl-4 flex items-center flex-wrap gap-x-space-xs">
+<span class="text-on-surface">Avi</span><span class="text-outline">.</span><span class="text-tertiary font-semibold">PrintName</span><span class="text-on-surface">();</span>
+<!-- Blinking Cyber Block Cursor -->
+<span class="inline-block w-2 h-4 bg-primary-container animate-pulse align-middle ml-0.5"></span>
+</div>
+</div>
+<!-- Ghost Code Suggestion by AI Copilot inline -->
+<div class="flex items-start gap-space-md leading-relaxed opacity-60">
+<span class="text-outline/40 select-none text-right w-6 text-code-sm font-code-sm">10</span>
+<div class="pl-4 flex items-center flex-wrap gap-x-space-xs text-outline italic">
+<span>// Copilot: return Avi.GetExitCode(); [Press TAB to commit]</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">11</span>
+<div class="pl-4 flex items-center flex-wrap gap-x-space-xs">
+<span class="text-secondary font-semibold">return</span>
+<span class="text-secondary-fixed">0</span><span class="text-on-surface">;</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md leading-relaxed group">
+<span class="text-outline/50 select-none text-right w-6 text-code-sm font-code-sm">12</span>
+<span class="text-on-surface">}</span>
+</div>
+<!-- Embedded Nano Classic Touch Command Palette at Base of Buffer -->
+<div class="mt-auto pt-space-md grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded">
+<span class="bg-primary text-on-primary font-bold text-label-sm font-label-sm px-1 rounded-sm">^G</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm truncate">Get Help</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded">
+<span class="bg-primary text-on-primary font-bold text-label-sm font-label-sm px-1 rounded-sm">^O</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm truncate">WriteOut</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded">
+<span class="bg-primary text-on-primary font-bold text-label-sm font-label-sm px-1 rounded-sm">^W</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm truncate">Where Is</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded">
+<span class="bg-primary text-on-primary font-bold text-label-sm font-label-sm px-1 rounded-sm">^K</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm truncate">Cut Text</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANE: Interactive AI Terminal & Diagnostics Copilot (5 cols on Foldable) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Sub-Card 1: Real-time Terminal Runtime & Shell Session -->
+<div class="flex flex-col bg-surface-container-low rounded-lg shadow-md overflow-hidden">
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">zsh — session #1</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="text-tertiary font-label-sm text-label-sm font-code-sm">0.04s avg</span>
+<button class="w-6 h-6 rounded flex items-center justify-center text-outline hover:text-on-surface"><span class="material-symbols-outlined text-[14px]">refresh</span></button>
+</div>
+</div>
+<div class="p-space-md font-code-sm text-code-sm flex flex-col gap-space-sm bg-surface-container-lowest/80 min-h-[200px]">
+<!-- Shell History Item -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="text-primary font-semibold">dev@nexus-term</span>
+<span class="text-outline">:</span>
+<span class="text-secondary font-medium">~/src/avi-engine</span>
+<span class="text-tertiary font-semibold">(main⚡)</span>
+<span class="text-on-surface">$</span>
+<span class="text-on-surface font-semibold">cmake --build build/</span>
+</div>
+<div class="text-on-surface-variant pl-space-xs">
+              [1/2] Compiling CXX object CMakeFiles/engine.dir/main.cxx.o<br/>
+<span class="text-tertiary">[2/2] Linking CXX executable bin/avi-engine</span><br/>
+<span class="text-primary">✨ Built target avi-engine in 142ms.</span>
+</div>
+</div>
+<!-- Shell Execution Prompt with live input -->
+<div class="flex items-center gap-space-xs flex-wrap pt-space-xs">
+<span class="text-primary font-semibold">dev@nexus-term</span>
+<span class="text-outline">:</span>
+<span class="text-secondary font-medium">~/src/avi-engine</span>
+<span class="text-on-surface">$</span>
+<span class="text-tertiary-fixed font-bold">./bin/avi-engine</span>
+<span class="w-2 h-3.5 bg-primary animate-pulse inline-block align-middle"></span>
+</div>
+<!-- Terminal Quick Autocomplete Chips Row -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar pt-space-xs mt-auto">
+<button class="bg-surface-container-high hover:bg-surface-bright text-primary px-space-sm py-1 rounded-full text-label-sm font-label-sm font-code-sm shrink-0 transition-colors">
+              ./bin/avi-engine
+            </button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface px-space-sm py-1 rounded-full text-label-sm font-label-sm font-code-sm shrink-0 transition-colors">
+              git status
+            </button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface px-space-sm py-1 rounded-full text-label-sm font-label-sm font-code-sm shrink-0 transition-colors">
+              ninja -j4
+            </button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-tertiary px-space-sm py-1 rounded-full text-label-sm font-label-sm font-code-sm shrink-0 transition-colors">
+              ctest --verbose
+            </button>
+</div>
+</div>
+</div>
+<!-- Sub-Card 2: Material 3 AI Copilot Diagnostic Card & Diff Inspector -->
+<div class="flex flex-col bg-surface-container-low rounded-lg p-space-md shadow-md gap-space-sm relative overflow-hidden">
+<!-- Ambient AI Accent Glow Gradient -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Nexus AI Diagnostic</span>
+<span class="text-tertiary font-label-sm text-label-sm">Static Verification Passed</span>
+</div>
+</div>
+<span class="bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm px-space-sm py-0.5 rounded-full font-code-sm font-semibold">
+            Claude 3.7
+          </span>
+</div>
+<!-- AI Insight Box -->
+<div class="bg-surface-container rounded p-space-sm flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface">
+<p class="text-on-surface leading-normal">
+<span class="text-tertiary font-semibold font-code-sm">Analysis:</span>
+<code class="text-primary font-code-sm">Avi</code> instance lifetime in <code class="text-secondary font-code-sm">main()</code> is completely deterministic and memory safe.
+          </p>
+<div class="bg-surface-container-lowest p-space-sm rounded font-code-sm text-code-sm text-on-surface-variant flex flex-col gap-1">
+<span class="text-outline font-label-sm text-label-sm uppercase font-semibold">Suggested Refactor (class.hpp):</span>
+<div class="text-error font-medium line-through">- Human(std::string name, int age);</div>
+<div class="text-tertiary font-medium">+ explicit Human(std::string_view name, uint32_t age) noexcept;</div>
+</div>
+</div>
+<!-- Copilot Interactive Actions -->
+<div class="flex items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-1.5 rounded-full text-label-sm font-label-sm flex items-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-secondary">chat_bubble</span>
+<span>Explain</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-1.5 rounded-full text-label-sm font-label-sm flex items-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px] text-tertiary">science</span>
+<span>Test Suite</span>
+</button>
+</div>
+<button class="bg-primary text-on-primary hover:bg-primary-fixed-dim px-space-md py-1.5 rounded-full font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Apply Diff</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Persistent Touch Accessory Soft-Key Strip (Optimized for Mobile/Foldable Virtual Keyboard) -->
+<div class="sticky bottom-0 z-40 bg-surface-container-high/95 backdrop-blur-md px-gutter-tablet py-space-xs shadow-lg mt-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<!-- Special Modifier Keycaps -->
+<button class="h-9 min-w-[44px] px-space-md rounded bg-surface-container-highest hover:bg-surface-bright text-primary font-code-sm text-code-sm font-bold flex items-center justify-center transition-all active:scale-95 shadow-inner">
+        ESC
+      </button>
+<button class="h-9 min-w-[40px] px-space-md rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm font-bold flex items-center justify-center transition-all active:scale-95">
+        TAB
+      </button>
+<!-- Active latched modifier example -->
+<button class="h-9 min-w-[44px] px-space-md rounded bg-primary text-on-primary font-code-sm text-code-sm font-bold flex items-center justify-center transition-all active:scale-95 shadow-md" id="ctrl-key-latch">
+        CTRL
+      </button>
+<button class="h-9 min-w-[44px] px-space-md rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface font-code-sm text-code-sm font-bold flex items-center justify-center transition-all active:scale-95">
+        ALT
+      </button>
+<!-- Symbol Soft Keys directly mirroring Nano/C++ editing need -->
+<button class="h-9 min-w-[36px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-tertiary font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        /
+      </button>
+<button class="h-9 min-w-[36px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-tertiary font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        -
+      </button>
+<button class="h-9 min-w-[36px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-tertiary font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        |
+      </button>
+<button class="h-9 min-w-[36px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        {
+      </button>
+<button class="h-9 min-w-[36px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        }
+      </button>
+<button class="h-9 min-w-[36px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-secondary font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        ~
+      </button>
+<!-- Direction & Navigation Cluster -->
+<button class="h-9 min-w-[40px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm flex items-center justify-center transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+<button class="h-9 min-w-[40px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm flex items-center justify-center transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</button>
+<button class="h-9 min-w-[40px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm flex items-center justify-center transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+<button class="h-9 min-w-[40px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant font-code-sm text-code-sm flex items-center justify-center transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Paging / Macro Keycaps -->
+<button class="h-9 min-w-[48px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-outline font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        HOME
+      </button>
+<button class="h-9 min-w-[44px] px-space-sm rounded bg-surface-container-highest hover:bg-surface-bright text-outline font-code-sm text-code-sm font-semibold flex items-center justify-center transition-all active:scale-95">
+        END
+      </button>
+</div>
+</div>
+<!-- Interactive JavaScript Micro-actions -->
+<script>
+    // Latch state demonstration for CTRL keycap
+    const ctrlBtn = document.getElementById('ctrl-key-latch');
+    if (ctrlBtn) {
+      let active = true;
+      ctrlBtn.addEventListener('click', () => {
+        active = !active;
+        if (active) {
+          ctrlBtn.className = 'h-9 min-w-[44px] px-space-md rounded bg-primary text-on-primary font-code-sm text-code-sm font-bold flex items-center justify-center transition-all active:scale-95 shadow-md';
+        } else {
+          ctrlBtn.className = 'h-9 min-w-[44px] px-space-md rounded bg-surface-container-highest text-on-surface font-code-sm text-code-sm font-bold flex items-center justify-center transition-all active:scale-95';
+        }
+      });
+    }
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.45)]" data-active-classes="bg-primary-container/20 text-primary font-semibold"><div class="flex justify-around items-center h-16 px-gutter max-w-lg mx-auto"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full transition-all active:scale-95 bg-primary-container/20 text-primary font-semibold" data-path="terminal-workspace" href="#"><span class="material-symbols-outlined text-[22px]">terminal</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Term</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="ai-copilot-studio" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Copilot</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="session-manager" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Sessions</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="git-inspector" href="#"><span class="material-symbols-outlined text-[22px]">commit</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Git</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">settings</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Config</span></a></div></nav></body></html>

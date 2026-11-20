@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#93000a", "primary-container": "#38bdf8", "on-primary": "#00354a", "on-surface": "#dfe2eb", "on-surface-variant": "#bdc8d1", "surface-dim": "#10141a", "tertiary-fixed": "#68fcbf", "surface-variant": "#31353c", "tertiary": "#4ee6aa", "surface-container-high": "#262a31", "primary-fixed-dim": "#7bd0ff", "inverse-primary": "#00668a", "tertiary-fixed-dim": "#45dfa4", "inverse-surface": "#dfe2eb", "on-tertiary": "#003825", "on-secondary-fixed-variant": "#4f319c", "on-tertiary-container": "#004e35", "inverse-on-surface": "#2d3137", "on-tertiary-fixed": "#002114", "outline": "#87929a", "on-secondary-container": "#bea8ff", "primary-fixed": "#c4e7ff", "background": "#10141a", "surface-tint": "#7bd0ff", "surface": "#10141a", "secondary-container": "#4f319c", "tertiary-container": "#22c990", "surface-container-lowest": "#0a0e14", "error": "#ffb4ab", "surface-container-highest": "#31353c", "on-primary-fixed-variant": "#004c69", "on-secondary-fixed": "#21005e", "on-primary-container": "#004965", "on-secondary": "#381385", "primary": "#8ed5ff", "secondary": "#cebdff", "on-error-container": "#ffdad6", "outline-variant": "#3e484f", "surface-bright": "#353940", "on-error": "#690005", "on-primary-fixed": "#001e2c", "on-tertiary-fixed-variant": "#005137", "surface-container-low": "#181c22", "on-background": "#dfe2eb", "surface-container": "#1c2026", "secondary-fixed": "#e8ddff", "secondary-fixed-dim": "#cebdff" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-md": "0.75rem", gutter: "0.5rem", "gutter-tablet": "1rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-xs": "0.25rem", margin: "0.75rem", "margin-tablet": "1.5rem", "space-sm": "0.5rem" }, fontFamily: { "code-sm": ["JetBrains Mono"], "body-md": ["Roboto Flex"], "headline-sm": ["Roboto Flex"], "label-md": ["JetBrains Mono"], "code-md": ["JetBrains Mono"], "headline-lg": ["Roboto Flex"], "body-lg": ["Roboto Flex"], "body-sm": ["Roboto Flex"], "headline-md": ["Roboto Flex"], "label-sm": ["JetBrains Mono"], "label-lg": ["JetBrains Mono"], "code-lg": ["JetBrains Mono"] }, fontSize: { "code-sm": ["11px", { lineHeight: "15px", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "code-md": ["13px", { lineHeight: "18px", fontWeight: "400" }], "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "code-lg": ["15px", { lineHeight: "22px", fontWeight: "500" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#10141a;color:#dfe2eb;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface min-h-screen text-on-surface flex flex-col font-body-md text-body-md selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.45)]"><div class="h-16 px-gutter flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter min-w-0"><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-high/60 active:scale-95"><span class="material-symbols-outlined text-[22px]">terminal</span></button><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="text-primary font-code-md text-code-md font-semibold truncate">Terminal Workspace</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></div><div class="flex items-center gap-gutter"><span class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>AI READY</span><span class="text-outline text-label-sm font-label-sm">•</span><span class="text-on-surface-variant font-label-sm text-label-sm font-code-sm">38% CPU</span></div></div></div><div class="flex items-center gap-space-xs"><div class="hidden sm:flex items-center gap-gutter bg-surface-container-high/70 px-space-md py-space-xs rounded-full"><span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Claude 3.7</span><span class="w-1 h-1 rounded-full bg-outline"></span><span class="font-label-sm text-label-sm text-tertiary">Gemini CLI</span></div><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors hover:bg-surface-container-high/60 active:scale-95"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_0_12px_rgba(142,213,255,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-md p-space-sm sm:p-space-md max-w-xl mx-auto">
+<!-- ZONE 1: TOP HALF - CLEAN VIEWPORT & TELEMETRY MONITOR (Upper 90° Flex Screen) -->
+<section class="flex flex-col rounded-lg bg-surface-container-lowest p-space-sm sm:p-space-md shadow-xl overflow-hidden relative">
+<!-- Top Utility & Clamshell Status Header -->
+<div class="flex items-center justify-between pb-space-xs mb-space-xs border-b border-outline-variant/30 text-on-surface-variant">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[14px]">smartphone</span>
+</span>
+<span class="font-label-md text-label-md text-primary font-semibold tracking-wide">FLEX-TOP // V-STAGE</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-tertiary">90° ANGLE LOCK</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code-sm text-code-sm">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          24.3MB
+        </span>
+<span class="text-outline">|</span>
+<span class="text-primary-container font-medium">120 FPS</span>
+</div>
+</div>
+<!-- Active Nano/Buffer Tabs -->
+<div class="flex items-center gap-space-xs mb-space-xs overflow-x-auto pb-1">
+<div class="flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary text-on-primary font-code-sm text-code-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[13px]">code</span>
+<span>main.cxx</span>
+<span class="material-symbols-outlined text-[12px] opacity-70">close</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[13px]">data_object</span>
+<span>class.hpp</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high text-tertiary font-code-sm text-code-sm ml-auto">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+<span>C++20</span>
+</div>
+</div>
+<!-- Live Code Buffer (Nano 5.7 emulation with Cyberpunk Glow) -->
+<div class="rounded bg-surface-container-low p-space-sm text-on-surface font-code-sm text-code-sm leading-relaxed overflow-x-auto relative">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center text-outline">
+<span class="w-6 select-none opacity-40">1</span>
+<span class="text-secondary font-medium">#include</span>
+<span class="text-on-surface-variant ml-1">&lt;iostream&gt;</span>
+</div>
+<div class="flex items-center text-outline">
+<span class="w-6 select-none opacity-40">2</span>
+<span class="text-secondary font-medium">#include</span>
+<span class="text-on-surface-variant ml-1">&lt;string&gt;</span>
+</div>
+<div class="flex items-center text-outline">
+<span class="w-6 select-none opacity-40">3</span>
+<span class="text-secondary font-medium">#include</span>
+<span class="text-on-surface-variant ml-1">"class.hpp"</span>
+</div>
+<div class="flex items-center">
+<span class="w-6 select-none text-outline opacity-40">4</span>
+<span class="text-tertiary font-semibold">int</span>
+<span class="text-primary ml-1">main</span><span class="text-on-surface">(int argc, char** argv) {</span>
+</div>
+<div class="flex items-center">
+<span class="w-6 select-none text-outline opacity-40">5</span>
+<span class="text-on-surface-variant ml-4">Human Avi{"Avi", 17};</span>
+</div>
+<div class="flex items-center">
+<span class="w-6 select-none text-outline opacity-40">6</span>
+<span class="text-on-surface-variant ml-4">Avi.PrintName();</span>
+<span class="inline-block w-2 h-4 ml-1 bg-primary animate-pulse align-middle"></span>
+</div>
+<div class="flex items-center">
+<span class="w-6 select-none text-outline opacity-40">7</span>
+<span class="text-secondary ml-4">return</span>
+<span class="text-primary-container ml-1">0;</span>
+</div>
+<div class="flex items-center">
+<span class="w-6 select-none text-outline opacity-40">8</span>
+<span class="text-on-surface">}</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Cards & AI Code Review (Live execution & memory monitor) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs mt-space-xs">
+<!-- Live Compilation Output -->
+<div class="flex flex-col justify-between p-space-sm rounded bg-surface-container text-on-surface">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">play_circle</span> BUILD LOG
+          </span>
+<span class="font-code-sm text-code-sm text-outline">clang++-18</span>
+</div>
+<div class="font-code-sm text-code-sm text-on-surface-variant">
+<span class="text-tertiary font-medium">✓ [BUILD OK]</span> 0 warnings<br/>
+<span class="text-primary">❯ ./main</span><br/>
+<span class="text-on-surface font-semibold bg-surface-container-high px-1 rounded">Avi: Registered User (Age: 17)</span>
+</div>
+</div>
+<!-- Micro Resource Sparkline & Copilot Annotation -->
+<div class="flex flex-col justify-between p-space-sm rounded bg-surface-container text-on-surface">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">psychology</span> CLAUDE 3.7
+          </span>
+<span class="font-label-sm text-label-sm text-tertiary">STABLE O(1)</span>
+</div>
+<!-- Sparkline SVG -->
+<div class="flex items-end gap-2 h-7 mt-1">
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+<path class="text-primary" d="M0,20 Q15,4 30,12 T60,8 T85,15 L100,5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path class="text-primary/10" d="M0,20 Q15,4 30,12 T60,8 T85,15 L100,5 L100,24 L0,24 Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-code-sm text-code-sm text-outline-variant mt-1 truncate">Stack zero-overhead allocation confirmed</span>
+</div>
+</div>
+</section>
+<!-- HINGE LINE / FLEX FOLD HORIZON SEPARATOR -->
+<div class="relative flex items-center justify-center my-0.5 select-none py-1">
+<div class="w-full h-1 rounded-full bg-gradient-to-r from-transparent via-primary-container/40 to-transparent"></div>
+<div class="absolute px-3 py-1 rounded-full bg-surface-container-high text-on-surface shadow-md flex items-center gap-1.5 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase font-bold">Flex Fold Horizon 90°</span>
+<span class="material-symbols-outlined text-[12px] text-primary">swap_vert</span>
+</div>
+</div>
+<!-- ZONE 2: BOTTOM HALF - TACTILE DEVELOPER MACRO DECK & AI COMMAND CENTER (Desk-flat ergonomically curved base) -->
+<section class="flex flex-col rounded-lg bg-surface-container p-space-sm sm:p-space-md shadow-2xl gap-space-sm">
+<!-- Macro Deck Header with Modifier LED Latches -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard_command_key</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Macro Deck</span>
+</div>
+<!-- Hardware-Style Modifier Latches (Dual-Thumb Ergonomics) -->
+<div class="flex items-center gap-1" id="modifier-latches">
+<button class="modifier-btn flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold transition-all active:scale-95 hover:bg-surface-bright" data-key="CTRL" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline status-dot"></span>
+          CTRL
+        </button>
+<button class="modifier-btn flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold transition-all active:scale-95 hover:bg-surface-bright" data-key="ALT" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline status-dot"></span>
+          ALT
+        </button>
+<button class="modifier-btn flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold transition-all active:scale-95 hover:bg-surface-bright" data-key="SUPER" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline status-dot"></span>
+          SUPER
+        </button>
+<button class="modifier-btn flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold transition-all active:scale-95 hover:bg-surface-bright" data-key="FN" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline status-dot"></span>
+          FN
+        </button>
+</div>
+</div>
+<!-- Primary Developer Action Grid (Big thumb-friendly tactile keys for desk usage) -->
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-1.5 sm:gap-2">
+<!-- Run Macro Tile -->
+<button class="flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-lg bg-tertiary-container text-on-tertiary-container shadow transition-all active:scale-95 group hover:opacity-90" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">rocket_launch</span>
+<span class="font-label-md text-label-md font-bold mt-0.5">RUN</span>
+<span class="font-code-sm text-[9px] opacity-75">g++ &amp; exec</span>
+</button>
+<!-- Git Commit Macro Tile -->
+<button class="flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-lg bg-surface-container-high text-primary shadow transition-all active:scale-95 group hover:bg-surface-bright" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">commit</span>
+<span class="font-label-md text-label-md font-bold mt-0.5">COMMIT</span>
+<span class="font-code-sm text-[9px] text-outline">git ci -m</span>
+</button>
+<!-- GDB Debug Macro Tile -->
+<button class="flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-lg bg-surface-container-high text-secondary shadow transition-all active:scale-95 group hover:bg-surface-bright" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">bug_report</span>
+<span class="font-label-md text-label-md font-bold mt-0.5">GDB</span>
+<span class="font-code-sm text-[9px] text-outline">breakpoint</span>
+</button>
+<!-- Kill Process SIGINT Tile -->
+<button class="flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-lg bg-error-container text-on-error-container shadow transition-all active:scale-95 group hover:opacity-90" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">cancel</span>
+<span class="font-label-md text-label-md font-bold mt-0.5">KILL</span>
+<span class="font-code-sm text-[9px] opacity-80">SIGINT (^C)</span>
+</button>
+<!-- Clear Terminal Buffer -->
+<button class="flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-lg bg-surface-container-high text-on-surface shadow transition-all active:scale-95 group hover:bg-surface-bright" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">cleaning_services</span>
+<span class="font-label-md text-label-md font-bold mt-0.5">CLEAR</span>
+<span class="font-code-sm text-[9px] text-outline">reset (^L)</span>
+</button>
+<!-- Pipe & Redirection Subdeck -->
+<button class="flex flex-col items-center justify-center p-2 sm:p-2.5 rounded-lg bg-primary-container text-on-primary shadow transition-all active:scale-95 group hover:opacity-90" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">filter_alt</span>
+<span class="font-label-md text-label-md font-bold mt-0.5">PIPES</span>
+<span class="font-code-sm text-[9px] opacity-80">| &gt; &gt;&gt; &amp;</span>
+</button>
+</div>
+<!-- Quick Operator Pill Deck (Single-tap symbol insertion strip) -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 scroll-smooth">
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-primary font-code-md text-code-md font-semibold active:bg-primary active:text-on-primary" type="button">ESC</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">TAB</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">|</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">&gt;</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">&gt;&gt;</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">&amp;&amp;</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">~/</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">-la</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">sudo</button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md active:bg-primary active:text-on-primary" type="button">grep</button>
+<button class="px-2 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md flex items-center justify-center active:bg-primary active:text-on-primary" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_upward</span>
+</button>
+<button class="px-2 py-1.5 rounded bg-surface-container-high text-on-surface font-code-md text-code-md flex items-center justify-center active:bg-primary active:text-on-primary" type="button">
+<span class="material-symbols-outlined text-[15px]">arrow_downward</span>
+</button>
+</div>
+<!-- AI Voice-Enabled Natural Language Prompt Command Center -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-lowest shadow-inner relative">
+<div class="flex items-center justify-between text-on-surface-variant mb-0.5">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[15px] animate-pulse">auto_awesome</span>
+          AI COPILOT COMMAND INTERFACE
+        </div>
+<span class="font-code-sm text-code-sm text-outline">Speech-to-CLI Active</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex-1 flex items-center gap-2 bg-surface-container-high px-3 py-2 rounded-full">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<input class="bg-transparent border-none outline-none font-code-sm text-code-sm text-on-surface placeholder:text-outline w-full focus:ring-0" placeholder='"Refactor print to format string and compile"' type="text" value="Refactor class Human constructor to use string_view"/>
+</div>
+<!-- Voice-to-Terminal Mic Button -->
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-lg transition-transform active:scale-90 hover:brightness-110 flex-shrink-0" title="Voice Dictation" type="button">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<!-- Dispatch Prompt to Terminal -->
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg transition-transform active:scale-90 hover:brightness-110 flex-shrink-0" title="Synthesize &amp; Execute" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+<!-- Quick AI Action Chips for Flex Mode -->
+<div class="flex items-center gap-1.5 mt-1 overflow-x-auto">
+<button class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[13px] text-primary">auto_fix_high</span>
+          Optimize Assembly
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[13px] text-tertiary">security</span>
+          Sanitize Memory
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[13px] text-secondary">help</span>
+          Explain Output
+        </button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive Hardware Latch state micro-interaction for dual-thumb typing
+  document.querySelectorAll('#modifier-latches .modifier-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const isLatched = button.getAttribute('data-active') === 'true';
+      const dot = button.querySelector('.status-dot');
+      
+      if (isLatched) {
+        button.setAttribute('data-active', 'false');
+        button.classList.remove('bg-primary', 'text-on-primary');
+        button.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        if (dot) {
+          dot.classList.remove('bg-on-primary');
+          dot.classList.add('bg-outline');
+        }
+      } else {
+        button.setAttribute('data-active', 'true');
+        button.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        button.classList.add('bg-primary', 'text-on-primary');
+        if (dot) {
+          dot.classList.remove('bg-outline');
+          dot.classList.add('bg-on-primary');
+        }
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.45)]" data-active-classes="bg-primary-container/20 text-primary font-semibold"><div class="flex justify-around items-center h-16 px-gutter max-w-lg mx-auto"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full transition-all active:scale-95 bg-primary-container/20 text-primary font-semibold" data-path="terminal-workspace" href="#"><span class="material-symbols-outlined text-[22px]">terminal</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Term</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="ai-copilot-studio" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Copilot</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="session-manager" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Sessions</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="git-inspector" href="#"><span class="material-symbols-outlined text-[22px]">commit</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Git</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] h-12 px-space-md rounded-full text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">settings</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Config</span></a></div></nav></body></html>

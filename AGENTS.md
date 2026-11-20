@@ -42,8 +42,30 @@ AI-powered auditable Android terminal. Positioning: "the AI terminal you can aud
 - [x] THREAT_MODEL.md
 - [x] docs/PLAN.md (approved)
 - [x] M0 spike: prefix build pipeline validated (bash + dep chain)
-- [ ] M0: full bootstrap build for com.zantor.terminal (running in zantor-builder)
-- [ ] M0: hands-on repro of kill/typing bugs on physical devices (needs user hardware; Samsung/Xiaomi)
+- [x] M0: bootstrap build for com.zantor.terminal, aarch64 (2026-10-10; arm/i686/x86_64 pending; container name is `terminus-builder`)
+- [ ] M0: bootstrap builds for arm/i686/x86_64
+- [ ] M0: hands-on repro of kill/typing bugs (Pixel 10 Pro XL / Android 17: phantom-process kill NOT repro'd — 40/40 bg procs alive; Samsung/Xiaomi still pending; Play Protect blocks the debug install — disable `verifier_verify_adb_installs` or tap through)
 - [ ] M0: competitive validation doc (needs device installs)
 - [ ] M0: reserve GitHub org + domain for final name (user action)
-- [ ] M1: termux-app fork build with new package ID
+- [x] M1: termux-app fork build with new package ID — built, installed on Pixel 10 Pro XL, verified (bash 5.3.20, apt, 577 bins, prefix baked)
+
+<!-- agent-sync:start (managed by agent-sync - edit outside these markers) -->
+## Multi-machine sync protocol (Windows + Kali)
+This repo is worked on from more than one machine. **GitHub is the source of truth.**
+
+**Before any work**
+1. Run `agent-sync pull` (or `git pull --rebase`). Never start on a stale tree.
+2. If `git status` shows changes you didn't make, stop and ask before touching them.
+3. Read `docs/HANDOFF.md` first - it has the current task, decisions and next steps. Don't re-explore the repo if it already answers your question.
+
+**While working (keep token use low)**
+- Skip `node_modules`, `dist`, `build`, `.venv`, lockfiles and generated files unless the task needs them.
+- Catch up with `git log --oneline -10` and `git diff --stat`, not full-file reads.
+- Search (`rg`/`grep`) before opening files; open only the parts you need.
+
+**When a task or loop is finished**
+1. Update `docs/HANDOFF.md` (40 lines max): what changed, current state, next steps, open questions.
+2. Run quick tests/lint if they exist.
+3. Commit with a clear message, then run `agent-sync push` (or `git pull --rebase && git push`).
+4. Never commit secrets (`.env`, keys, tokens) and never force-push. If the push fails or the rebase conflicts, stop and report.
+<!-- agent-sync:end -->
